@@ -1,7 +1,14 @@
 from htmltojson import *
 import requests
 from bs4 import BeautifulSoup, NavigableString
+import json
 
+with open('/Users/isaiahchan/Documents/pokemon-learnsets/src/pokemonstats.json', 'r') as myfile:
+    data=myfile.read()
+
+pokemonlist = json.loads(data)
+
+print(pokemonlist[int("name")])
 
 pokemon_name = 'pikachu' # change this to whatever pokemon you want
 
