@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup, NavigableString
 
 
-pokemon_name = 'bulbasaur'
+pokemon_name = 'bulbasaur' # change this to whatever pokemon you want
 
 response = requests.get(
     f'https://pokemondb.net/pokedex/{pokemon_name}/moves/1')
