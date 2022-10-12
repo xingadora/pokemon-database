@@ -1,5 +1,4 @@
 from htmltojson import *
-import json
 import requests
 from bs4 import BeautifulSoup, NavigableString
 
