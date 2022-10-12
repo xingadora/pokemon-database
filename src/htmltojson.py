@@ -1,3 +1,6 @@
+# credit: https://github.com/mdminhazulhaque/html-table-to-json
+
+
 import json
 
 def html_to_json(content, indent=None):
