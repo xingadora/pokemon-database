@@ -14,17 +14,17 @@ soup = BeautifulSoup(response.text, 'html.parser')
 table = soup.find("table")
 
 
-typephysical = table.find_all(attrs={"data-sort-value": "physical"})
-typespecial = table.find_all(attrs={"data-sort-value": "special"})
-typestatus = table.find_all(attrs={"data-sort-value": "status"})
+for element in table.find_all(string="—"):
+    element.string.replace_with("none")
 
-for element in typephysical:
+
+for element in table.find_all(attrs={"data-sort-value": "physical"}):
     element.insert(0, NavigableString("physical"))
 
-for element in typespecial:
+for element in table.find_all(attrs={"data-sort-value": "special"}):
     element.insert(0, NavigableString("special"))
 
-for element in typestatus:
+for element in table.find_all(attrs={"data-sort-value": "status"}):
     element.insert(0, NavigableString("status"))
 
 
