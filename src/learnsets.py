@@ -13,7 +13,7 @@ pokemonlist = json.loads(data)
 
 def generate_learnset(pokemon_name):
     response = requests.get(
-        f'https://pokemondb.net/pokedex/{pokemon_name}/moves/1')
+        f'https://pokemondb.net/pokedex/{pokemon_name}/moves/1') # the 1 at the end is for gen 1
 
     soup = BeautifulSoup(response.text, 'html.parser')
 
