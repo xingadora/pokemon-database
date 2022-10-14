@@ -47,7 +47,7 @@ with open("learnsets.json", "a") as o:
 
 for pokemon in pokemonlist:
     pokemon_name = pokemon['name']
-    generate_learnset(pokemon_name)
+    # generate_learnset(pokemon_name)
 
 with open("learnsets.json", "a") as o:
     o.write("{" + "}]")
