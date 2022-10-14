@@ -51,3 +51,4 @@ for pokemon in pokemonlist:
 
 with open("learnsets.json", "a") as o:
     o.write("{" + "}]")
+    
