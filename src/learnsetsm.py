@@ -36,8 +36,22 @@ rows = table.find_all('tr')
 # print(pokemon_name)
 # unf_generate_learnset(pokemon_name)
 
-def apa():
+def td():
     for row in rows[1:]:
-        print("<th>" + row.td.text + "</th>")
+        yield "<th>" + row.td.text + "</th>"
 
-apa()
+def tr():
+    for row in rows[1:]:
+        yield "<td>" + row.a.text + "</td>"
+
+
+top = "<table>" + "<thead>" + "<tr>"
+tds = list(td())
+mid = "</tr>" + "</thead>" + "<tbody>" + "<tr>"
+trs = list(tr())
+bot = "</tr>" + "</tbody>" + "</table>"
+
+
+html = top + ''.join(tds) + mid + ''.join(trs) + bot
+
+print(html)
