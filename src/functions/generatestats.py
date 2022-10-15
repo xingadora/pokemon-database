@@ -1,14 +1,16 @@
-from operator import attrgetter, index
 import requests
-from bs4 import BeautifulSoup, NavigableString
-from pathlib import Path
+from bs4 import BeautifulSoup
 from htmltojson import *
+from getlinkandoutput import *
 
-outputFile = Path('output/all/stats.json')
+outputFile = 'a'
+link = 'b'
 
 
-def generate_stats(outputFile):
-    link = 'https://pokemondb.net/pokedex/all'
+def generate_stats(generation):
+
+    getlinkandoutput(generation)
+
     response = requests.get(link)
     soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -46,10 +48,6 @@ def generate_stats(outputFile):
         a.insert_after(type2tag)
 
 
-    tabe = table.encode('utf-8')
 
     with open(outputFile, "a") as o:
         o.write(html_to_json(table))
-
-
-generate_stats(outputFile)
