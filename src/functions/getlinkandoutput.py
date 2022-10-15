@@ -1,4 +1,4 @@
-import generatestats
+import functions.generatestats
 from pathlib import Path
 
 def getlinkandoutput(generation):
@@ -34,5 +34,5 @@ def getlinkandoutput(generation):
 
 
 
-    generatestats.outputFile = path
-    generatestats.link = link
+    functions.generatestats.outputFile = path
+    functions.generatestats.link = link
