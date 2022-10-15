@@ -3,7 +3,7 @@ from pathlib import Path
 from functions.htmltojson import *
 from functions.generatelearnset import *
 
-names = Path('/data/pokemonlist.txt')
+names = Path('src/data/pokemonlist.txt')
 
 
 with open(names, 'r') as myfile:
