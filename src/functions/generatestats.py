@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-from functions.htmltojson import *
-from functions.getlinkandoutput import *
+from .htmltojson import html_to_json
+from .getlinkandoutput import getlinkandoutput
 
 outputFile = 'a'
 link = 'b'

@@ -1,0 +1,19 @@
+{
+  "name": "pokemon-database",
+  "version": "1.0.0",
+  "description": "school thing",
+  "main": "generator.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xingadora/pokemon-database.git"
+  },
+  "author": "Xingadora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xingadora/pokemon-database/issues"
+  },
+  "homepage": "https://github.com/xingadora/pokemon-database#readme"
+}
