@@ -1,5 +1,5 @@
 from htmltojson import *
-from learnsets import *
+# from learnsets import *
 import requests
 from bs4 import BeautifulSoup, NavigableString
 import json
@@ -16,19 +16,12 @@ import json
 pokemon_name = 'bulbasaur'
 
 response = requests.get(
-    f'https://pokemondb.net/pokedex/{pokemon_name}/moves/1')  # the 1 at the end is for gen 1
+    f'https://pokemondb.net/pokedex/{pokemon_name}/moves/1')
 
 soup = BeautifulSoup(response.text, 'html.parser')
 table = soup.table
 rows = table.find_all('tr')
 
-# print("<table>" + "<thead>" + "<tr>")
-# for row in rows[1:]:
-#     print("<th>" + row.td.text + "</th>")
-# print("</tr>" + "</thead>" + "<tbody>" + "<tr>")
-# for row in rows[1:]:
-#     print("<td>" + row.a.text + "</td>")
-# print("</tr>" + "</tbody>" + "</table>")
 
 
 # for pokemon in pokemonlist:
