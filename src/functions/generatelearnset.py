@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup, NavigableString
-from functions.htmltojson import *
+from .htmltojson import html_to_json
 
 
 def generate_learnset(pokemon_name, generation, learntype, outputFile):
