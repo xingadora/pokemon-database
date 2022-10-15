@@ -1,4 +1,4 @@
-from htmltojson import *
+from functions.htmltojson import *
 # from learnsets import *
 import requests
 from bs4 import BeautifulSoup, NavigableString
@@ -21,7 +21,6 @@ response = requests.get(
 soup = BeautifulSoup(response.text, 'html.parser')
 table = soup.table
 rows = table.find_all('tr')
-
 
 
 # for pokemon in pokemonlist:
