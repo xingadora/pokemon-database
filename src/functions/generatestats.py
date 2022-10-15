@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup, NavigableString
+from pathlib import Path
 from htmltojson import *
 
 
@@ -12,10 +13,3 @@ def generate_stats(outputFile):
 
     with open(outputFile, "a") as o:
         o.write(html_to_json(table))
-
-
-
-
-
-
-print(a)

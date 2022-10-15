@@ -1,16 +1,19 @@
 import json
+from pathlib import Path
 from functions.htmltojson import *
 from functions.generatelearnset import *
 
+names = Path('/data/pokemonlist.txt')
 
-with open('src\data\pokemonnames.json', 'r') as myfile:
+
+with open(names, 'r') as myfile:
     data = myfile.read()
 
 pokemonlist = json.loads(data)
 
 
 generation = '1'
-outputFile = f'output\gen{generation}\learnsets.json'
+outputFile = Path('output/all/learnsets.json')
 
 
 generate_learnset(pokemonlist, generation, outputFile)

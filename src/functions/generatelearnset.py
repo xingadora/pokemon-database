@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup, NavigableString
 from functions.htmltojson import *
 
 
-def generate_learnset(pokemon_name, generation, outputFile):
+def generate_learnset(pokemon_name, generation, learntype, outputFile):
     link = f'https://pokemondb.net/pokedex/{pokemon_name}/moves/{generation}'
 
     response = requests.get(link)
