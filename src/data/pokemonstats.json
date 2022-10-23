@@ -350,7 +350,7 @@
   },
   {
     "id": 29,
-    "name": "Nidoran-f",
+    "name": "Nidoran♀",
     "type1": "Poison",
     "total": 275,
     "hp": 55,
@@ -387,7 +387,7 @@
   },
   {
     "id": 32,
-    "name": "Nidoran-m",
+    "name": "Nidoran♂",
     "type1": "Poison",
     "total": 273,
     "hp": 46,
@@ -1024,7 +1024,7 @@
   },
   {
     "id": 83,
-    "name": "Farfetchd",
+    "name": "Farfetch'd",
     "type1": "Normal",
     "type2": "Flying",
     "total": 377,
@@ -1506,7 +1506,7 @@
   },
   {
     "id": 122,
-    "name": "Mr-Mime",
+    "name": "Mr. Mime",
     "type1": "Psychic",
     "type2": "Fairy",
     "total": 460,

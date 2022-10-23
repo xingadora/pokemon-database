@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup, NavigableString
-from .htmltojson import html_to_json
+# from .htmltojson import html_to_json
+from pathlib import Path
+
+outputFile = Path('output/gen1/learnset.json')
 
 
 def generate_learnset(pokemon_name, generation, learntype, outputFile):
@@ -27,7 +30,13 @@ def generate_learnset(pokemon_name, generation, learntype, outputFile):
     for element in table.find_all(attrs={"data-sort-value": "status"}):
         element.insert(0, NavigableString("status"))
 
-    with open(outputFile, "a") as o:
+    print(table.encode("utf-8"))
+    
+
+    """ with open(outputFile, "a") as o:
         o.write('{"' + pokemon_name + '":')
         o.write(html_to_json(table))
-        o.write('},')
+        o.write('},') """
+
+
+generate_learnset('bulbasaur', '1', 'level-up', outputFile)
